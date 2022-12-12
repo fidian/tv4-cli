@@ -219,6 +219,11 @@ loadMetaSchemas()
         () => done,
         (err) => {
             console.error(err.toString());
+
+            if (err.stack) {
+                debug(err.stack);
+            }
+
             process.exit(err.code);
         }
     );
