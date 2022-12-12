@@ -181,7 +181,7 @@ function handleDataFiles(schema, dataFiles, ban) {
                 return loadFile(dataFile);
             })
             .then((data) => {
-                const result = verify(schema, data, ban);
+                const result = verify(resolve(schema), data, ban);
 
                 if (result) {
                     const err = new Error(
