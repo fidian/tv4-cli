@@ -12,6 +12,7 @@ import { metaSchema } from "./meta-schema.mjs";
 import { metaUnevaluated } from "./meta-unevaluated.mjs";
 import { metaValidation } from "./meta-validation.mjs";
 import neodoc from "neodoc";
+import { normSchema } from './norm-schema';
 import path from "path";
 import tv4 from "tv4";
 import yaml from "yaml-js";
@@ -120,10 +121,12 @@ function loadSchema(schema) {
 
     return loadFile(schema)
         .then((data) => {
+            normSchema(data, schema);
             addedSchemas.push(schema);
             addSchema(schema, data);
 
             const missing = tv4.getMissingUris();
+            console.log(missing);
 
             if (missing.length) {
                 return loadSchema(missing[0]);
