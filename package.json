@@ -1,6 +1,6 @@
 {
     "name": "@fidian/tv4-cli",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Command-line tool for data validation using JSON Schema and tv4",
     "bin": {
         "tv4-cli": "./tv4-cli.mjs"

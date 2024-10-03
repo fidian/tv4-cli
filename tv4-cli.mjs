@@ -12,7 +12,7 @@ import { metaSchema } from "./meta-schema.mjs";
 import { metaUnevaluated } from "./meta-unevaluated.mjs";
 import { metaValidation } from "./meta-validation.mjs";
 import neodoc from "neodoc";
-import { normSchema } from './norm-schema';
+import { normSchema } from './norm-schema.mjs';
 import path from "path";
 import tv4 from "tv4";
 import yaml from "yaml-js";
