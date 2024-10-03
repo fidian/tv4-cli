@@ -126,7 +126,6 @@ function loadSchema(schema) {
             addSchema(schema, data);
 
             const missing = tv4.getMissingUris();
-            console.log(missing);
 
             if (missing.length) {
                 return loadSchema(missing[0]);
