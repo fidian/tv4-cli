@@ -1,17 +1,18 @@
 {
     "name": "@fidian/tv4-cli",
-    "version": "0.2.2",
+    "version": "1.0.0",
     "description": "Command-line tool for data validation using JSON Schema and tv4",
     "bin": {
         "tv4-cli": "./tv4-cli.mjs"
     },
     "scripts": {
+        "reinstall": "rm -rf node_modules package-lock.json && npm install",
         "test": "node --test *.test.mjs"
     },
     "dependencies": {
-        "debug": "^4.3.4",
+        "debug": "^4.4.3",
         "neodoc": "^2.0.2",
-        "node-fetch": "^3.3.0",
+        "node-fetch": "^3.3.2",
         "tv4": "^1.3.0",
         "yaml-js": "^0.3.1"
     },
